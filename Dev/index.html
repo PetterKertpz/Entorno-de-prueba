@@ -11,7 +11,32 @@
     <h1>Document</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
-
+    <aside>
+        <h2>Aside Section</h2>
+        <p>This is an aside section.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+    </aside>
+    <main>
+        <div id="app">
+            <h1>{{ title }}</h1>
+            <p>{{ message }}</p>
+            <button @click="changeMessage">Change Message</button>
+        </div>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    title: 'Hello Vue!',
+                    message: 'This is a simple Vue.js application.'
+                },
+                methods: {
+                    changeMessage() {
+                        this.message = 'The message has been changed!';
+                    }
+                }
+            });
+        </script>
+    </main>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
